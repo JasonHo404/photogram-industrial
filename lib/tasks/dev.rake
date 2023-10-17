@@ -53,8 +53,8 @@ task( :sample_data => :environment) do
   users.each do |user|
     rand(15).times do
       photo = user.own_photos.create(
-        caption: Faker::JapaneseMedia::CowboyBebop.quote,
-        image: "https://robohash.org/#{rand(9999)}"
+        caption: Faker::JapaneseMedia::OnePiece.quote,
+        image: Faker::LoremFlickr.image(size: "500x600", search_terms: ['island', 'pirate', 'ship'])
       )
 
       user.followers.each do |follower|
