@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
   
+
+  resources :users, only: [:show]
   resources :likes
   resources :follow_requests
   resources :comments
