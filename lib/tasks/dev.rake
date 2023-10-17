@@ -34,8 +34,8 @@ task( :sample_data => :environment) do
       private: [true, false].sample,
     )
   end
-
   
+
   p "#{User.count} users have been created"
   
   users = User.all
