@@ -5,7 +5,7 @@
     </h1>
 
     <h2>
-      Likes
+      Followers
     </h2>
 
     <ul class="nav nav-pills nav-justified">
@@ -28,6 +28,6 @@
   </div>
 </div>
 
-<% @user.liked_photos.each do |photo| %>
-  <%= render "photos/photo", photo: photo %>
+<% @user.followers.each do |follower| %>
+  <%= render "users/follows", follower: follower %>
 <% end %>
