@@ -1,11 +1,8 @@
- <div class="col md-5 offset-1">
+<div class="row">
+  <div class="col md-6 offset-1">
     <h1>
       <%= @user.username.capitalize() %>
     </h1>
-
-    <h2>
-      Photos
-    </h2>
 
     <ul class="nav nav-pills nav-justified">
       <li class="nav-item">
@@ -27,10 +24,6 @@
   </div>
 </div>
 
-
-
-
-<% @user.feed.each do |photo| %>
-    <%= render "photos/photo", photo: photo %>
-
+<% @user.liked_photos.each do |photo| %>
+  <%= render "photos/photo", photo: photo %>
 <% end %>
