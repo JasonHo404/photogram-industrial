@@ -12,9 +12,9 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   
-  get ":username/liked" => "users#liked", as: :liked
-  get ":username/feed" => "users#feed", as: :feed
-  get ":username/followers" => "users#followers", as: :followers
-  get ":username/following" => "users#following", as: :following
-  get ":username" => "users#show", as: :user
+  get ":username/liked" => "users#liked", as: :liked, constraints: {username: /.*/}
+  get ":username/feed" => "users#feed", as: :feed, constraints: {username: /.*/}
+  get ":username/followers" => "users#followers", as: :followers, constraints: {username: /.*/}
+  get ":username/following" => "users#following", as: :following,constraints: {username: /.*/}
+  get ":username" => "users#show", as: :user, constraints: {username: /.*/}
 end

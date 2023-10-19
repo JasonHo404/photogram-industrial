@@ -3,7 +3,7 @@
 </h1>
 
 <h2>
-  <%=request.path.gsub(@user.username, '').gsub("/", "").capitalize() %>
+  <%=request.path.gsub("%20", "").gsub(@user.username.gsub(" ", ""), '').gsub("/", "").capitalize() %>
 </h2>
 <ul class="nav nav-pills nav-justified">
   <li class="nav-item">
